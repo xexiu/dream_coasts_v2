@@ -1,0 +1,36 @@
+<% content_for :content do %>
+<!-- <h1>Hi, I'm a Content</h1> -->
+<% end %>
+<%= yield :content %>
+
+<main class="cf">
+    <nav class="contentHeader">
+      <ul>
+        <li class="logo"></li>
+        <li class="mainLink displaypc">
+          <i class="fa fa-bars fa-2x target"></i>
+          <ul class="dropDown">
+            <li><%= link_to 'Home', root_path %></li>
+            <li><%= link_to 'Browse All', beaches_path %></li>
+            <li><a href="#">Contact</a></li>
+            <li class="openRegister"><a href="#">Log In</a></li>
+          </ul>
+        </li>
+      </ul>
+      <ul class="menupc">
+        <li><%= link_to 'Home', root_path %></li>
+        <li><%= link_to 'Browse All', beaches_path %></li>
+        <li><a href="#">Contact</a></li>
+        <li class="openRegister"><a href="#">Log In</a></li>
+      </ul>
+    </nav>
+  <section class="sectionUp ycenter">
+        <article class="articleUp">
+          <h1 class="h1FirstTitle"><%= @Main_Title %></h1>
+          <h2 class="h2SecondTitle"><%= @Sub_Title %></h2>
+          <a href="view.html"><button class="buttonUp">View Beaches</button></a>
+        </article>
+  </section>
+  <div class="register">
+  </div>
+</main>
