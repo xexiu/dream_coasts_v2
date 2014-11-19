@@ -16,6 +16,25 @@
         </li>
     </ul>
   </div>
+
+  <% if user_signed_in? %>
+  <div style="position: absolute; top: -45px; right: 10px; padding: 5px; background-color: red; width: 50px; height: auto; color: white"><h2>IN</h2>
+    <ul>
+    <li><%= link_to "Profile", edit_user_registration_path %><br /></li>
+    <li><%= link_to "Settings", '#' %></li>
+    <li><%= link_to "Logout", destroy_user_session_path, :method => :delete %></li>
+    </ul>
+  </div>
+    <% else %>
+    <div style="position: absolute; top: -45px; right: 10px; padding: 5px; background-color: black; width: 50px; height: auto; color: white">
+      <ul>
+        <li><%= link_to "Sign in", new_user_session_path %></li>
+      </ul>
+    </div>
+  <% end %>
+
+  <li><%= link_to "Admin",        new_admin_session_path %></li><br />
+
   <aside id="menu_items">
   </aside>
   <section id="important" class="cf">
