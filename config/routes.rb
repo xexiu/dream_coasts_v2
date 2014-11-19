@@ -1,7 +1,13 @@
 Rails.application.routes.draw do
+  # get 'users/index'
+
   devise_for :admins
   devise_for :users
   root 'site#index'
+  match '/users',   to: 'users#index',   via: 'get'
+  match '/users/:id',     to: 'users#show',       via: 'get'
+  # devise_for :users, :path_prefix => 'd'
+  resources :users, :only =>[:show]
   resources :beaches, only: [:index]
   # get '/beaches/:id'
   # The priority is based upon order of creation: first created -> highest priority.

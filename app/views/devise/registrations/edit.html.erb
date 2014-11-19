@@ -5,7 +5,7 @@
   }
 </style>
 <div class="container">
-  <h1 class="jumbotron">Hi, <%= gravatar_for resource_name.to_s.humanize %></h1>
+  <h1 class="jumbotron"><%= image_tag current_user.gravatar_url %> Hi, <%= resource_name.to_s.humanize %></h1>
   <h2>Edit <%= resource_name.to_s.humanize %></h2>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
