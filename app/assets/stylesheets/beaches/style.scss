@@ -49,6 +49,16 @@ body:after {
   background-size: 100% 100%;
 }
 
+.innerLogo {
+  background-image: url(logo.png);
+  background-repeat: no-repeat;
+  width: 40px;
+  height: 40px;
+  margin-left: 140px !important;
+  margin-top: 5px;
+  display: block;
+}
+
 .wrap-register {
   position:absolute;
   top: 0px;

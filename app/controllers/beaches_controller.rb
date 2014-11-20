@@ -16,7 +16,7 @@ class BeachesController < ApplicationController
     @beach = Beach.new entry_params
     if @beach.save
       flash[:notice] = 'Beach created successfully'
-      redirect_to action: :index, controller: :beaches
+      redirect_to action: :new, controller: :beaches
     else
       flash[:alert] = 'Could not save the Beach'
       redirect_to action: :new, controller: :beaches

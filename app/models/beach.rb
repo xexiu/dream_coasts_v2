@@ -12,13 +12,15 @@
 #
 
 class Beach < ActiveRecord::Base
+  before_save :to_lower
+  before_create :to_lower
   validates :name, presence: true, uniqueness: true
   validates :short_description, presence: true
   validates :long_description, presence: true, length: { maximum: 500 }
   validates :img, presence: true
 
-  def to_param
-  "#{name}".parameterize
+  def to_lower
+    self.name = self.name.downcase.gsub(/\s+/, '')
   end
 
 end

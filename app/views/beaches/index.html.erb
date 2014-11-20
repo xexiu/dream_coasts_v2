@@ -2,7 +2,7 @@
 <main id="main" class="cf">
   <span id="logo">
     <%= link_to root_path do %>
-      Dream <i>Coasts</i></a></span>
+      <i class="innerLogo"></i></a></span>
     <% end %>
   <div id="breadcrumb">
     <ul class="crumbs">
@@ -19,6 +19,10 @@
   <aside id="menu_items">
   </aside>
   <section id="important" class="cf">
-    <h1>Most Voted Coasts</h1>
+    <h1>Most Voted Coasts
+      <%= link_to new_beach_path, {:style => 'z-index: 7;'} do %>
+        <i class="fr fa fa-wrench" style="margin-right: 5px"></i>
+      <% end %>
+    </h1>
   </section>
 </main>

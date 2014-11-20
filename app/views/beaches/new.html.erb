@@ -1,7 +1,13 @@
+<style>
+  .alert {
+    z-index: 10000;
+    position: relative;
+  }
+</style>
 <main id="main" class="cf" style="background-color: white; opacity: 1; border-radius: 5px; height: 1000px;">
   <span id="logo">
   <%= link_to root_path do %>
-    Dream <i>Coasts</i></a></span>
+    <i class="innerLogo"></i></a></span>
   <% end %>
   <div id="breadcrumb">
     <ul class="crumbs">
@@ -33,3 +39,5 @@
   </section>
 </main>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>

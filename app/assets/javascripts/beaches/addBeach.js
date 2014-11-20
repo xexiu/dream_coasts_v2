@@ -1,5 +1,9 @@
 $(document).ready(function() {
 
+  String.prototype.capitalize = function() {
+    return this.charAt(0).toUpperCase() + this.slice(1);
+  }
+
   // Add active status for links on breadcrumb depending on which page you are!!
   var url = window.location.pathname;
   // var filename = url.substring(url.lastIndexOf('/')+1);
@@ -22,7 +26,7 @@ $(document).ready(function() {
       var aside_menu_nav_ul_li = document.createElement('li');
       aside_menu_nav_ul_li.id = 'tag_'+beaches[i].id;
       aside_menu_nav_ul_li.className = 'menu_item';
-      var aside_menu_nav_ul_li_inner = '<a href="#'+beaches[i].name+'">' + beaches[i].name + '</a>'; // Trim double quotes (no quotes)
+      var aside_menu_nav_ul_li_inner = '<a href="#'+beaches[i].name+'">' + beaches[i].name.capitalize() + '</a>'; // Trim double quotes (no quotes)
       aside_menu_nav_ul_li.innerHTML = aside_menu_nav_ul_li_inner;
       aside_menu.appendChild(aside_menu_nav).appendChild(aside_menu_nav_ul).appendChild(aside_menu_nav_ul_li);
       //=========================================================================================================
@@ -34,7 +38,7 @@ $(document).ready(function() {
       article.className = 'cf view ' + beaches[i].name.replace(/[\s+'']/g, ""); // Replace white spaces and single quotes
       var header = document.createElement('header');
       var h2 = document.createElement('h2');
-      var h2_content = '<a href="'+beaches[i].name.replace(/[\s+'']/g, "").toLowerCase()+'.html">' + beaches[i].name + '</a>';
+      var h2_content = '<a href="'+beaches[i].name.replace(/[\s+'']/g, "").toLowerCase()+'.html">' + beaches[i].name .capitalize() + '</a>';
       h2.innerHTML = h2_content;
       var img_1 = document.createElement('img');
       img_1.className = 'img';
