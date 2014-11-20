@@ -1,14 +1,15 @@
 Rails.application.routes.draw do
   # get 'users/index'
 
-  devise_for :admins
-  devise_for :users
+  # devise_for :admins
+  # devise_for :users
   root 'site#index'
-  match '/users',   to: 'users#index',   via: 'get'
-  match '/users/:id',     to: 'users#show',       via: 'get'
+  # match '/users',   to: 'users#index',   via: 'get'
+  # match '/users/:id',     to: 'users#show',       via: 'get'
   # devise_for :users, :path_prefix => 'd'
-  resources :users, :only =>[:show]
-  resources :beaches, only: [:index]
+  # resources :users
+  resources :beaches, only: [:index, :new, :create]
+  match '/beaches', to: 'beaches#index', via: 'post'
   # get '/beaches/:id'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

@@ -1,11 +1,11 @@
 $(document).ready(function(){
-  $('.openRegister').click(function(e){
+  $('.btn-register').click(function(e){
      e.stopPropagation();
       $('.register').css({
       'display':'block'
       });
       $('.register').animate({
-      'margin-right':'0',
+      'width':'250px'
       }, 'slow');
   });
 
@@ -15,15 +15,18 @@ $(document).ready(function(){
 
   $(document).click(function(e){
     $('.register').animate({
-    'margin-right':'-250',
+    'width':'0px',
     }, 'slow');
+    $('.register').css({
+      'display':'none'
+      });
   });
 
   $(document).keyup(function(e) {
     if (e.keyCode === 27) {
       var _self = $('.register');
       $(_self).animate({
-      'margin-right':'-250',
+      'margin-right':'-250'
       }, 'slow');
     }
   }); // Press ESC will also close the drop-down

@@ -1,0 +1,15 @@
+<%= form_for [@beach] do |f| %>
+<%= @beach.name %>
+<%= f.label :name %><br />
+<%= f.text_field :name, size: 49 %>
+<br />
+<%= f.label :short_description %><br />
+<%= f.text_area(:short_description, rows: 4, cols: 50) %>
+<br />
+<%= f.label :long_description %><br />
+<%= f.text_area(:long_description, rows: 4, cols: 50) %>
+<br />
+<%= f.label :img %> (URL) only jpg, png<br />
+<%= f.text_field(:img, size: 49) %><br /><br />
+<%= f.submit 'Save', :class => 'btn btn-success' %>
+<% end %>
