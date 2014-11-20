@@ -226,48 +226,48 @@ dl {
   color: #333 !important;
   background-position: 100% -96px !important; }
 
-#main {
+#main, #main_view {
   position: relative;
   padding: 10px;
   width: 900px;
   margin: 40px auto;
   z-index: 2;
   opacity: .8; }
-  #main span#logo {
+  #main span#logo, #main_view span#logo {
     width: 190px;
     height: 35px;
     position: absolute;
     color: #222;
     top: -35px;
     left: 14px; }
-    #main span#logo i {
+    #main span#logo i, #main_view span#logo i {
       margin-left: 5px;
       font-size: 1.7em;
       line-height: 35px; }
-    #main span#logo a {
+    #main span#logo a, #main_view span#logo a {
       color: #222;
       text-shadow: 1px -1px 1px rgba(255, 255, 255, 0.8); }
-      #main span#logo a:hover {
+      #main span#logo a:hover, #main_view span#logo a:hover {
         color: #333; }
-  #main #breadcrumb {
+  #main #breadcrumb, #main_view #breadcrumb {
     position: absolute;
     display: block;
     margin-top: -40px;
     margin-left: 232px; }
-  #main #breadcrumb ul {
+  #main #breadcrumb ul, #main_view #breadcrumb ul {
     list-style: none; }
-  #main .crumbs {
+  #main .crumbs, #main_view .crumbs {
     display: block; }
-  #main .crumbs li {
+  #main .crumbs li, #main_view .crumbs li {
     display: inline; }
-  #main .crumbs li.first {
+  #main .crumbs li.first, #main_view .crumbs li.first {
     padding-left: 8px; }
-  #main .crumbs li.location {
+  #main .crumbs li.location, #main_view .crumbs li.location {
     color: white;
     float: left;
     padding-top: 5px;
     margin-right: 20px; }
-  #main .crumbs li a, #main .crumbs li a:link, #main .crumbs li a:visited {
+  #main .crumbs li a, #main .crumbs li a:link, #main .crumbs li a:visited, #main_view .crumbs li a, #main_view .crumbs li a:link, #main_view .crumbs li a:visited {
     color: #666;
     display: block;
     float: left;
@@ -276,33 +276,33 @@ dl {
     padding: 7px 17px 11px 25px;
     position: relative;
     text-decoration: none; }
-  #main .crumbs li a {
+  #main .crumbs li a, #main_view .crumbs li a {
     background-image: url("bg-crumbs.png");
     background-repeat: no-repeat;
     background-position: 100% 0;
     position: relative; }
-  #main .crumbs li a:hover {
+  #main .crumbs li a:hover, #main_view .crumbs li a:hover {
     color: #333;
     background-position: 100% -48px;
     cursor: pointer; }
-  #main .crumbs li a:active {
+  #main .crumbs li a:active, #main_view .crumbs li a:active {
     color: #333;
     background-position: 100% -96px; }
-  #main .crumbs li.first a span {
+  #main .crumbs li.first a span, #main_view .crumbs li.first a span {
     height: 29px;
     width: 3px;
     border-left: 1px solid #d9d9d9;
     position: absolute;
     top: 0px;
     left: 0px; }
-  #main aside#menu_items {
+  #main aside#menu_items, #main_view aside#menu_items {
     width: 180px;
     float: left; }
-    #main aside#menu_items nav ul li {
+    #main aside#menu_items nav ul li, #main_view aside#menu_items nav ul li {
       padding-bottom: 5px;
       padding-top: 5px;
       padding-left: 5px; }
-    #main aside#menu_items nav ul li.active {
+    #main aside#menu_items nav ul li.active, #main_view aside#menu_items nav ul li.active {
       margin-right: -45px;
       background-color: white;
       padding-bottom: 5px;
@@ -310,16 +310,16 @@ dl {
       border-top-left-radius: 5px;
       border-bottom-left-radius: 5px;
       color: #222; }
-      #main aside#menu_items nav ul li.active a {
+      #main aside#menu_items nav ul li.active a, #main_view aside#menu_items nav ul li.active a {
         color: #222; }
-        #main aside#menu_items nav ul li.active a:hover {
+        #main aside#menu_items nav ul li.active a:hover, #main_view aside#menu_items nav ul li.active a:hover {
           color: #222; }
-    #main aside#menu_items nav ul li a {
+    #main aside#menu_items nav ul li a, #main_view aside#menu_items nav ul li a {
       color: white; }
-      #main aside#menu_items nav ul li a:hover {
+      #main aside#menu_items nav ul li a:hover, #main_view aside#menu_items nav ul li a:hover {
         color: #fff;
         border-bottom: 1px dotted #fff; }
-  #main section#important {
+  #main section#important, #main_view section#important {
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     -ms-border-radius: 5px;
@@ -328,7 +328,7 @@ dl {
     float: right;
     width: 75%;
     margin-bottom: 250px; }
-    #main section#important aside.thumbs a {
+    #main section#important aside.thumbs a, #main_view section#important aside.thumbs a {
       margin-top: 5px;
       margin-left: 10px;
       float: right;
@@ -336,7 +336,7 @@ dl {
       font-size: 14px;
       padding-right: 10px;
       margin-bottom: 5px; }
-  #main section#important h1 {
+  #main section#important h1, #main_view section#important h1 {
     display: block;
     text-align: center;
     font-size: 32px;
@@ -345,38 +345,38 @@ dl {
     padding-top: 10px;
     padding-bottom: 10px;
     border-bottom: 1px solid #f1f1f1; }
-  #main aside.fix {
+  #main aside.fix, #main_view aside.fix {
     padding-left: 10px;
     padding-right: 10px; }
-  #main article.fix p {
+  #main article.fix p, #main_view article.fix p {
     padding-left: 20px;
     padding-right: 20px; }
-  #main article.fix:hover {
+  #main article.fix:hover, #main_view article.fix:hover {
     border-left: 0px solid #f1f1f1;
     border-right: 0px solid #f1f1f1; }
-  #main article.view {
+  #main article.view, #main_view article.view {
     border-bottom: 2px dotted #f1f1f1;
     position: relative;
     z-index: 4; }
-    #main article.view:hover {
+    #main article.view:hover, #main_view article.view:hover {
       border-left: 2px solid transparent;
       border-right: 2px solid transparent;
       background-color: #e5e7da;
       opacity: 1;
       color: white; }
-  #main article header {
+  #main article header, #main_view article header {
     text-align: left;
     margin-left: 120px;
     color: #222;
     font-size: 20px;
     margin-bottom: 5px;
     margin-top: 15px; }
-  #main article header h2 a {
+  #main article header h2 a, #main_view article header h2 a {
     color: #384047;
     font-size: 18px; }
-  #main article p a {
+  #main article p a, #main_view article p a {
     color: #333333; }
-  #main article img.img-center {
+  #main article img.img-center, #main_view article img.img-center {
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     -ms-border-radius: 5px;
@@ -387,7 +387,7 @@ dl {
     width: 75%;
     display: block;
     height: 400px; }
-  #main article img.img {
+  #main article img.img, #main_view article img.img {
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     -ms-border-radius: 5px;
@@ -399,7 +399,7 @@ dl {
     margin-bottom: 5px;
     width: 100px;
     height: 100px; }
-  #main article p {
+  #main article p, #main_view article p {
     display: block;
     padding-right: 10px;
     padding-left: 10px;
@@ -408,9 +408,9 @@ dl {
     overflow: hidden;
     font-weight: normal;
     font-size: .9em; }
-  #main article span {
+  #main article span, #main_view article span {
     display: none; }
-  #main article:hover span {
+  #main article:hover span, #main_view article:hover span {
     display: block;
     margin-right: -15px; }
 
