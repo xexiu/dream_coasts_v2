@@ -34,19 +34,19 @@
   <div class="register">
   <h2>Log in</h2>
 
-<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+<%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
   <div class="field">
-    <%= f.label :username %><br />
+    <%= f.label :username, :class => "label" %><br />
     <%= f.text_field :username, autofocus: true %>
   </div>
 
   <div class="field">
-    <%= f.label :login %><br />
+    <%= f.label :login, :class => "label" %><br />
     <%= f.text_field :login %>
   </div>
 
   <div class="field">
-    <%= f.label :password %><br />
+    <%= f.label :password, :class => "label" %><br />
     <%= f.password_field :password, autocomplete: "off" %>
   </div>
 
@@ -58,7 +58,7 @@
   <% end -%>
 
   <div class="actions">
-    <%= f.submit "Log in" %>
+    <%= f.submit "Log in", :class => "login" %>
   </div>
 <% end %>
 
