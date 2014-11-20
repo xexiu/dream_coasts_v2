@@ -1,0 +1,24 @@
+<a href="" class="buttonScroll"></a>
+<main id="main" class="cf">
+  <span id="logo">
+    <%= link_to root_path do %>
+      Dream <i>Coasts</i></a></span>
+    <% end %>
+  <div id="breadcrumb">
+    <ul class="crumbs">
+      <li class="first">
+        <%= link_to root_path, {:style => 'z-index: 9;'} do %><span></span>Home<% end %>
+      </li>
+      <li>
+        <%= link_to beaches_path, {:style => 'z-index: 8;'} do %>
+        Browse All
+        <% end %>
+        </li>
+    </ul>
+  </div>
+  <aside id="menu_items">
+  </aside>
+  <section id="important" class="cf">
+    <h1>Most Voted Coasts</h1>
+  </section>
+</main>

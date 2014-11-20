@@ -1,0 +1,31 @@
+@mixin border-radius($radius: 5px) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
+@mixin linksTd {
+	text-decoration: none;
+}
+
+@mixin gallery {
+  -webkit-background-size: cover;
+     -moz-background-size: cover;
+       -o-background-size: cover;
+            background-size: cover;
+            margin: 0;
+}
+
+@mixin keyframes($gallery) {
+  @-webkit-keyframes #{$gallery} {
+    @content;
+  }
+  @-moz-keyframes #{$gallery} {
+    @content;
+  }
+  @keyframes #{$gallery} {
+    @content;
+  }
+}
+

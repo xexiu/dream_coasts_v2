@@ -1,0 +1,35 @@
+<main id="main" class="cf" style="background-color: white; opacity: 1; border-radius: 5px; height: 1000px;">
+  <span id="logo">
+  <%= link_to root_path do %>
+    Dream <i>Coasts</i></a></span>
+  <% end %>
+  <div id="breadcrumb">
+    <ul class="crumbs">
+      <li class="first">
+        <%= link_to root_path, {:style => 'z-index: 9;'} do %><span></span>Home<% end %>
+      </li>
+      <li>
+        <%= link_to beaches_path, {:style => 'z-index: 8;'} do %>
+        Browse All
+        <% end %>
+        </li>
+        <li>
+          <%= link_to new_beach_path, {:style => 'z-index: 7;'} do %>
+        Add Beach
+        <% end %>
+        </li>
+    </ul>
+  </div>
+  <section id="important" class="cf" style="width:100%; padding: 10px">
+    <h1 style="margin-top: -20px">Add New Beach</h1>
+    <% if @beach.errors.any? %>
+      <ul>
+        <% @beach.errors.full_messages.each do |error_msg| %>
+        <li><%= error_msg %></li>
+        <% end %>
+      </ul>
+    <% end %>
+    <%= render 'form' %>
+  </section>
+</main>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">

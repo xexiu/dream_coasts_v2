@@ -1,0 +1,496 @@
+@import "media.scss";
+@import "variables.scss";
+@import "links.scss";
+@import "mixins.scss";
+@import "buttons.scss";
+@import "border-commit.scss";
+@import url(http://fonts.googleapis.com/css?family=Montserrat);
+
+html, body {
+  background-color: #ecf0f1;
+  overflow-x: hidden;
+  font-size: 16px;
+  font-style: normal;
+  line-height: 1;
+  text-rendering: geometricPrecision;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: 'Montserrat', sans-serif;
+  width: 100%;
+  height: 100%;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+*:focus {
+  outline: 0;
+}
+
+main {
+   -webkit-animation-name: gallery;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-duration: 10s;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  position: relative;
+  box-shadow: 0px 0px 4px #a1a1a1;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+@include keyframes(gallery) {
+  0% {
+   background: url(cover1.jpg) no-repeat;
+   @include gallery
+  }
+
+  50% {
+    background: url(cover2.jpg) no-repeat;
+   @include gallery
+  }
+
+  75% {
+    background: url(cover3.jpg) no-repeat;
+   @include gallery
+  }
+
+  100% {
+    background: url(cover1.jpg) no-repeat;
+   @include gallery
+  }
+}
+
+.buttonUp {
+  text-shadow: 0px 0px #808080, 0px 0px #808080;
+  box-shadow: 0px 2px 5px #303030;
+  &:hover {
+    text-shadow: 1px 1px #808080, -1 -1 #808080;
+    box-shadow: 0px 3px 8px #303030;
+  }
+}
+
+.displaypc {
+  display: none;
+}
+
+nav.contentHeader {
+  position: relative;
+  top: 0;
+  right: 0;
+  padding: 20px;
+}
+
+nav.contentHeader ul {
+  position: relative;
+}
+
+nav.contentHeader ul li {
+  list-style-type: none;
+}
+
+li.logo {
+  margin-top: -10px;
+  float: left;
+  display: block;
+  width: 50px;
+  height: 50px;
+  @include border-radius(25px);
+  background-color: black;
+}
+
+//MENU PC//////////////////////////
+ul.menupc {
+  float: right;
+  background-color: #222;
+  @include border-radius;
+  opacity: .8;
+  display: block;
+  height: 40px;
+}
+
+ul.menupc li {
+  font-size: 20px;
+  text-shadow: 1px 2px #000000;
+  display: inline-block;
+  margin: 0px 10px 0px 20px;
+}
+
+ul.menupc li a {
+  text-decoration:none;
+  color: #ccc;
+  display: inline-block;
+  line-height: 40px;////////////////////??????????????????????
+  &:hover {
+    text-decoration: none;
+    color: white;
+  }
+}
+
+section.sectionUp {
+  position: relative;
+  left: 26%;
+  width: 70%;
+}
+
+section.sectionUp article.articleUp {
+  width: 70%;
+}
+
+h1.h1FirstTitle {
+  position: relative;
+  right: 10%;
+  font: bold 40px 'Arial';
+  text-shadow: 1px 2px #000000;
+  margin: 0;
+  padding: 0;
+  color: #ffffff;
+}
+
+h2.h2SecondTitle {
+  font: bold 28px 'Arial';
+  text-shadow: 1px 2px #000000;
+  margin-top: 8px;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  color: #eae8e3;
+}
+
+button.buttonUp {
+  @include btn-blueIndex-pc;
+  font-size: 25px;
+  width: 100%;
+  & a {
+    color: white;
+    text-decoration: none;
+  }
+}
+
+div.divInfoIndexContent1 {
+  background-color: #ff6600;
+  height: 400px;
+}
+
+div.register {
+  background-color: $colorShadow;
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: none;
+  box-shadow: 0px 2px 2px 2px  rgba(#000000, 0.5);
+  margin-right: -250px;
+  width: 250px;
+  height: 100%;
+}
+
+
+//************************************************
+//Phonnes*****************************************
+//************************************************
+@include phones {
+
+  .displaypc {
+   display: block !important;
+ }
+
+ ul.menupc {
+  display: none !important;
+}
+
+main {
+   -webkit-animation-name: gallery;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-duration: 10s;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  position: relative;
+  box-shadow: 0px 0px 4px #a1a1a1;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+@include keyframes(gallery) {
+  0% {
+   background: url(cover1.jpg) no-repeat;
+   @include gallery
+  }
+
+  50% {
+    background: url(cover2.jpg) no-repeat;
+   @include gallery
+  }
+
+  75% {
+    background: url(cover3.jpg) no-repeat;
+   @include gallery
+  }
+
+  100% {
+    background: url(cover1.jpg) no-repeat;
+   @include gallery
+  }
+}
+
+nav.contentHeader {
+  position: relative;
+  top: 0;
+  right: 0;
+  padding: 20px;
+}
+
+nav.contentHeader ul {
+  position: relative;
+}
+
+nav.contentHeader ul li {
+  list-style-type: none;
+}
+
+li.logo {
+  margin-top: -10px;
+  float: left;
+  display: block;
+  width: 50px;
+  height: 50px;
+  @include border-radius(25px);
+  background-color: black;
+}
+
+nav.contentHeader ul li.mainLink:nth-child(2) {
+  float: right;
+  cursor: pointer;
+  margin-top: -10px;
+  padding: 0px 4px 0px 4px;
+  background-color: #222;
+  box-shadow: inset 40px 10px 10px rgba(255,255,255,.1);
+  @include border-radius;
+}
+
+nav.contentHeader ul li.mainLink i.target {
+  color: #ccc;
+}
+
+nav.contentHeader ul li.mainLink ul.dropDown {
+  @include border-radius;//
+  position: absolute;
+  display: none;
+  right: 5%;
+  margin-top: 30px;
+  background-color: #222;
+  width: 90%;
+  cursor: pointer;
+  opacity: 0.9;
+  z-index: 3;
+}
+
+ul.dropDown li a {
+  color: white;
+  text-decoration: none;
+  width: 98.5%;
+  padding: 5px 0px 5px 5px;
+  display: inline-block;
+  text-align: center;
+  &:hover {//
+    background-color: #333;
+    @include border-radius;//
+  }
+}
+
+section.sectionUp {
+  position: relative;
+  left: 10%;
+  width: 90%;
+}
+
+section.sectionUp article.articleUp {
+  width: 90%;
+}
+
+h1.h1FirstTitle {
+  position: relative;
+  right:  22%;
+  font: bold 18px 'Arial';
+  text-shadow: 1px 2px #000000;
+  margin: 0;
+  padding: 0;
+  color: #ffffff;
+}
+
+h2.h2SecondTitle {
+  font: bold 14px 'Arial';
+  text-shadow: 1px 2px #000000;
+  margin-top: 8px;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  color: #eae8e3;
+}
+
+button.buttonUp {
+	@include btn-blueIndex;
+  font-size: 14px;
+}
+
+}
+//************************************************
+//Tablets*****************************************
+//************************************************
+@include tablets {
+
+  section.sectionUp article.articleUp {
+  width: 100%;
+}
+
+  ul.menupc {
+    display: none !important;
+  }
+
+  .displaypc {
+   display: block !important;
+ }
+
+main {
+   -webkit-animation-name: gallery;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-duration: 10s;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  position: relative;
+  box-shadow: 0px 0px 4px #a1a1a1;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+@include keyframes(gallery) {
+  0% {
+   background: url(cover1.jpg) no-repeat;
+   @include gallery
+  }
+
+  50% {
+    background: url(cover2.jpg) no-repeat;
+   @include gallery
+  }
+
+  75% {
+    background: url(cover3.jpg) no-repeat;
+   @include gallery
+  }
+
+  100% {
+    background: url(cover1.jpg) no-repeat;
+   @include gallery
+  }
+}
+
+nav.contentHeader {
+  position: relative;
+  top: 0;
+  right: 0;
+  padding: 20px;
+}
+
+nav.contentHeader ul {
+  position: relative;
+}
+
+nav.contentHeader ul li {
+  list-style-type: none;
+}
+
+li.logo {
+  margin-top: -10px;
+  float: left;
+  display: block;
+  width: 50px;
+  height: 50px;
+  @include border-radius(25px);
+  background-color: black;
+}
+
+nav.contentHeader ul li.mainLink:nth-child(2) {
+  float: right;
+  cursor: pointer;
+  margin-top: -10px;
+    padding: 0px 4px 0px 4px;
+    background-color: #222;
+    box-shadow: inset 40px 10px 10px rgba(255,255,255,.1);
+    @include border-radius;
+  }
+
+  nav.contentHeader ul li.mainLink i.target {
+    color: #ccc;
+  }
+
+  nav.contentHeader ul li.mainLink ul.dropDown {
+    @include border-radius;//
+    position: absolute;
+    display: none;
+    right: 5%;
+    margin-top: 30px;
+    background-color: #222;
+    width: 90%;
+    cursor: pointer;
+    opacity: .8;
+    z-index: 3;
+  }
+
+  ul.dropDown li a {
+    color: white;
+    text-decoration: none;
+    width: 98.5%;
+    padding: 5px 0px 5px 5px;
+    display: inline-block;
+    text-align: center;
+    &:hover {//
+      background-color: #333;
+      @include border-radius;//
+    }
+  }
+
+section.sectionUp {
+  position: relative;
+  left: 24%;
+  width: 90%;
+}
+
+section.sectionUp article.articleUp {
+  width: 90%;
+}
+
+h1.h1FirstTitle {
+  position: relative;
+  right: 11%;
+  font: bold 30px 'Arial';
+  text-shadow: 1px 2px #000000;
+  margin: 0;
+  padding: 0;
+  color: #ffffff;
+}
+
+h2.h2SecondTitle {
+  font: bold 23px 'Arial';
+  text-shadow: 1px 2px #000000;
+  margin-top: 8px;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  color: #eae8e3;
+}
+
+  button.buttonUp {
+    @include btn-blueIndex;
+    width: 70% !important;
+
+  }
+
+}
