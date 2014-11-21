@@ -4,6 +4,7 @@ require 'rails/all'
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
+Bundler.require(:default, Rails.env)ifdefined?(Bundler)
 Bundler.require(*Rails.groups)
 
 module DreamCostsV2
@@ -20,5 +21,7 @@ module DreamCostsV2
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
+    # Configure sensitive parameters which will be filtered from the logfile.
+    config.filter_parameters += [:password]
   end
 end

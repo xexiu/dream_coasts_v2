@@ -1,6 +1,7 @@
-  <h1 class="jumbotron">Listing users</h1>
-
-  <table>
+  <table class="container">
+    <tr>
+        <h1 class="jumbotron">Listing users</h1>
+    </tr>
     <thead>
       <tr>
         <th>Name</th>
@@ -21,7 +22,6 @@
       <% end %>
     </tbody>
   </table>
-
   <br>
 
   <%= link_to 'New User', new_user_path, :class => 'btn btn-success' %>
