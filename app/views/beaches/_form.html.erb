@@ -1,14 +1,29 @@
 <%= form_for [@beach] do |f| %>
 <%= f.label :name %><br />
-<%= f.text_field :name, size: 49 %>
+<%= f.text_field :name, size: 139 %>
 <br />
 <%= f.label :short_description %><br />
-<%= f.text_area(:short_description, rows: 4, cols: 50) %>
+<%= f.text_area(:short_description, rows: 4, cols: 140) %>
 <br />
 <%= f.label :long_description %><br />
-<%= f.text_area(:long_description, rows: 4, cols: 50) %>
+<%= f.text_area(:long_description, rows: 4, cols: 140) %>
+<br />
+<%= f.label :whatsee %><br />
+<%= f.text_area(:whatsee, rows: 4, cols: 140) %>
+<br />
+<%= f.label :whatdo %><br />
+<%= f.text_area(:whatdo, rows: 4, cols: 140) %>
+<br />
+<%= f.label :activities %><br />
+<%= f.text_area(:activities, rows: 4, cols: 140) %>
+<br />
+<%= f.label :restaurants %><br />
+<%= f.text_area(:restaurants, rows: 4, cols: 140) %>
+<br />
+<%= f.label :nightlife %><br />
+<%= f.text_area(:nightlife, rows: 4, cols: 140) %>
 <br />
 <%= f.label :img %> (URL) only jpg, png<br />
-<%= f.text_field(:img, size: 49) %><br /><br />
-<%= f.submit 'Save', :class => 'btn btn-success' %>
+<%= f.text_field(:img, size: 139) %><br /><br />
+<%= f.submit 'Save', :style => 'width: 100%; height: 50px; font-size: 1.5em;', :class => 'btn btn-success' %>
 <% end %>

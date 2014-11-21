@@ -26,6 +26,6 @@ class BeachesController < ApplicationController
 private
 
   def entry_params
-    params.require(:beach).permit(:name, :short_description, :long_description, :img)
+    params.require(:beach).permit(:name, :short_description, :long_description, :whatsee, :whatdo, :nightlife, :activities, :restaurants, :img)
   end
 end

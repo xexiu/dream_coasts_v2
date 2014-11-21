@@ -18,10 +18,10 @@
         </li>
       </ul>
     </div>
-    <aside id="menu_items">
-    </aside>
+<!--     <aside id="menu_items">
+    </aside> -->
     <section id="important" class="cf">
-      <h1><%= @beach.name %></h1>
+      <h1><%= @beach.name.upcase %></h1>
       <article class="cf fix">
         <span class="fav-btn"><a href=""><i class="fa fa-star-o fa-2x"></i></a></span>
         <img class="img-center" src="<%= @beach.img %>" height="300" width="493">
@@ -35,12 +35,35 @@
         <header>
           <h2 class="info">What to see?</h2>
         </header>
-        <dl>
-          <dt>Example 1:</dt>
-          <dd>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut sint autem ipsa quisquam culpa aspernatur quia molestiae beatae <a href="#">here</a> magni quo fugit qui doloribus odio aliquam, velit amet at soluta expedita.</dd>
-          <dt>Example 2:</dt>
-          <dd>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error veniam, facilis facere sed nemo magni, unde ut tempora fugiat ratione ipsa hic perspiciatis harum repellendus. Officiis voluptate sunt molestias, excepturi aliquid rem enim, veritatis sapiente, nisi totam, quidem. Odit, ea.</dd>
-        </dl>
+          <p><%= @beach.whatsee %></p>
+      </article>
+      <article class="cf fix Whattodo">
+        <a name="What to do?"></a>
+        <header>
+          <h2 class="info">What to do?</h2>
+        </header>
+        <p><%= @beach.whatdo %></p>
+      </article>
+      <article class="cf fix Activities">
+        <a name="Activities"></a>
+        <header>
+          <h2 class="info">Activities</h2>
+        </header>
+        <p><%= @beach.activities %></p>
+      </article>
+      <article class="cf fix Restaurants">
+        <a name="Restaurants"></a>
+        <header>
+          <h2 class="info">Restaurants</h2>
+        </header>
+        <p><%= @beach.restaurants %></p>
+      </article>
+      <article class="cf fix Nightlife">
+        <a name="Nightlife"></a>
+        <header>
+          <h2 class="info">Nightlife</h2>
+        </header>
+        <p><%= @beach.nightlife %></p>
       </article>
     </section>
   </main>
