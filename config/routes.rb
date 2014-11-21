@@ -1,9 +1,6 @@
 Rails.application.routes.draw do
-  get 'users/new'
-  match '/signup',  :to => 'users#new', via: 'get'
-  resources :microposts
-
   resources :users
+  get '/signup' => 'users#new'
 
   # get 'users/index'
 
