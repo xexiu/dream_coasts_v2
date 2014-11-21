@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  layout 'layout_users'
   before_action :set_user, only: [:show, :edit, :update, :destroy]
 
   respond_to :html
